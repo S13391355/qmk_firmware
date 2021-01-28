@@ -252,6 +252,9 @@ OSAL_IRQ_HANDLER(Vector80) {
         SN_CT16B1->MR21 = led_state[row_ofst + 13].b | 1;
         SN_CT16B1->MR22 = led_state[row_ofst + 14].b | 1;
         SN_CT16B1->MR23 = led_state[row_ofst + 15].b | 1;
+        SN_CT16B1->MR0  = led_state[row_ofst + 16].b | 1;
+        SN_CT16B1->MR1  = led_state[row_ofst + 17].b | 1;
+        SN_CT16B1->MR2  = led_state[row_ofst + 18].b | 1;
     }
 
     if(current_led_row % 3 == 1)
@@ -272,6 +275,9 @@ OSAL_IRQ_HANDLER(Vector80) {
         SN_CT16B1->MR21 = led_state[row_ofst + 13].g | 1;
         SN_CT16B1->MR22 = led_state[row_ofst + 14].g | 1;
         SN_CT16B1->MR23 = led_state[row_ofst + 15].g | 1;
+        SN_CT16B1->MR0  = led_state[row_ofst + 16].g | 1;
+        SN_CT16B1->MR1  = led_state[row_ofst + 17].g | 1;
+        SN_CT16B1->MR2  = led_state[row_ofst + 18].g | 1;
     }
     if(current_led_row % 3 == 2)
     {
@@ -291,6 +297,9 @@ OSAL_IRQ_HANDLER(Vector80) {
         SN_CT16B1->MR21 = led_state[row_ofst + 13].r | 1;
         SN_CT16B1->MR22 = led_state[row_ofst + 14].r | 1;
         SN_CT16B1->MR23 = led_state[row_ofst + 15].r | 1;
+        SN_CT16B1->MR0  = led_state[row_ofst + 16].r | 1;
+        SN_CT16B1->MR1  = led_state[row_ofst + 17].r | 1;
+        SN_CT16B1->MR2  = led_state[row_ofst + 18].r | 1;
     }
 
     // Enable PWM outputs on column pins

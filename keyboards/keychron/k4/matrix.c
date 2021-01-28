@@ -228,7 +228,7 @@ OSAL_IRQ_HANDLER(Vector80) {
 
     // Turn the next row on
     current_led_row = (current_led_row + 1) % LED_MATRIX_ROWS_HW;
-    
+
     current_row = (current_row + 1) % MATRIX_ROWS;
 
     uint8_t row_idx = hw_row_to_matrix_row[current_led_row];
